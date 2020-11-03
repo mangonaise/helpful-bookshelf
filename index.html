@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="resources/favicon-32x32.png">
+    <title>Books</title>
+</head>
+<body>
+    <button id="theme-switch-button">Theme</button>
+    <div id="heading-container">
+        <h1>📚 the helpful bookshelf</h1>
+    </div>
+
+    <div id="fade"></div>
+
+    <div id="form-container">
+        <div class="new-book-form">
+
+            <button id="cancel" class="form-submit warning"><p id="cancel-icon">x</p></button>
+            <h2 id="book-form-title">New Book</h2>
+        
+            <label for="author">Title</label>
+            <input id="title" type="text" name="title">
+
+            <label for="author">Author</label>
+            <input id="author" type="text" name="author" maxlength="25">
+
+            <label for="page-count">Number of pages</label>
+            <input id="page-count" type="number" name="number of pages" min="0" step="1">
+
+            <label>Read status</label>
+            <div class="read-status-selector">
+                <div id="select-not-read" class="read-status-option pointer">
+                    <i class="read-icon">⠀⠀</i>
+                    <p>Not read</p>
+                </div>
+                <div id="select-in-progress" class="read-status-option pointer">
+                    <i class="read-icon">⠀⠀</i>
+                    <p>In progress</p>
+                </div>
+                <div id="select-read" class="read-status-option pointer">
+                    <i class="read-icon">⠀⠀</i>
+                    <p>Read</p>
+                </div>
+            </div>
+
+            <button id="submit-new-book" class="form-submit">Add</button>
+            <button id="delete" class="form-submit warning">✗ Delete</button>
+        </div>
+    </div>
+
+    
+    
+    <div class="book-grid"></div>
+
+    <div id="info">
+        <h2>Let's get started!</h2>
+        <div id="info-text-container">
+            <p class="info-text">
+                Want to keep a record of all the books you want to read?<br><br><strong>The helpful bookshelf</strong> is a simple way to organize your reading list.<br><br>
+                Add your first book to start.
+            </p>
+            <button id="add-book-button">+ add book</button>
+        </div> 
+    </div>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyC5aovZNw-CmuwFwLBRyknTDKJGMjdPeok",
+        authDomain: "odin-personal-bookshelf.firebaseapp.com",
+        databaseURL: "https://odin-personal-bookshelf.firebaseio.com",
+        projectId: "odin-personal-bookshelf",
+        storageBucket: "odin-personal-bookshelf.appspot.com",
+        messagingSenderId: "131449784144",
+        appId: "1:131449784144:web:75d4b57a8e275f0b22ce55"
+    };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
