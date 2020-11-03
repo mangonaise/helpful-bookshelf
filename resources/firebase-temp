@@ -1,0 +1,21 @@
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyC5aovZNw-CmuwFwLBRyknTDKJGMjdPeok",
+        authDomain: "odin-personal-bookshelf.firebaseapp.com",
+        databaseURL: "https://odin-personal-bookshelf.firebaseio.com",
+        projectId: "odin-personal-bookshelf",
+        storageBucket: "odin-personal-bookshelf.appspot.com",
+        messagingSenderId: "131449784144",
+        appId: "1:131449784144:web:75d4b57a8e275f0b22ce55"
+    };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="app.js"></script>
